@@ -1,0 +1,13 @@
+name: install
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  install:
+    runs-on: local
+    steps:
+      - uses: actions/checkout@v4
+      - name: install binaries
+        run: make install
